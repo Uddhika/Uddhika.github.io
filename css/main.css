@@ -5,6 +5,18 @@ body {
   font-family: 'Poppins', arial;
 }
 
+nav {
+  display: none;
+  position: fixed;
+  z-index: 999;
+  width: 30%;
+  right: 0;
+  top: 0;
+  background: #EB6137;
+  height: 100vh;
+  padding: 2em;
+}
+
 ul {
   list-style-type: none;
   margin: 0;
@@ -12,6 +24,7 @@ ul {
 }
 
 a {
+  display: block;
   text-decoration: none;
 }
 
@@ -43,14 +56,13 @@ header .logo {
 }
 
 header ul {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
+  margin-top: 2em;
 }
 
 header ul a {
+  text-align: right;
   display: block;
-  padding: 0 1em;
+  padding: 0.2em 0.3em;
 }
 
 .social-header, .hero-design {
@@ -227,7 +239,49 @@ section {
   text-align: center;
 }
 
+.mobile-menu {
+  cursor: pointer;
+  width: 1em;
+  height: 1em;
+}
+
+.menu-btn {
+  display: block;
+}
+
+.mobile-menu-exit {
+  width: 1em;
+  height: 1em;
+  float: right;
+  cursor: pointer;
+}
+
 @media only screen and (min-width: 800px) {
+  nav {
+    display: unset;
+    background: unset;
+    height: auto;
+    position: unset;
+    width: 80%;
+    padding: 0;
+  }
+  nav ul {
+    width: 40%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    place-content: space-between;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    float: right;
+  }
+  nav a {
+    text-decoration: none;
+  }
+  .mobile-menu, .mobile-menu-exit {
+    display: none;
+  }
   .featured, .portfolio {
     text-align: left;
   }

@@ -1,18 +1,40 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700&display=swap');
 
+// *{
+//     border: solid black 1px;
+// }
+
 body{
     height: 100vh;
     margin: 0;
     font-family: 'Poppins', arial;
 }
 
+nav {
+  display: none;
+  position: fixed;
+  z-index: 999;
+  width: 30%;
+  right: 0;
+  top: 0;
+  background: #EB6137;
+  height: 100vh;
+  padding: 2em;
+  
+}
+
+
+
+
 ul{
+    
     list-style-type: none;
     margin: 0;
     padding: 0;
 }
 
 a{
+    display: block;
     text-decoration: none;
 }
 
@@ -20,8 +42,9 @@ img{width: 100%;}
 
 .nav-container{
     background: #EB6137;
-
+    
     a{
+        
         color: white;
     }
 }
@@ -39,11 +62,13 @@ header{
     
 
     ul{
-        display: flex;
+        // display: flex;
+        margin-top: 2em;
 
             a{
+                text-align: right;
                 display: block;
-                padding: 0 1em;
+                padding: 0.2em 0.3em;
             }
 
     }
@@ -268,7 +293,59 @@ section{
     text-align: center;
 }
 
+.mobile-menu{
+    cursor: pointer;    
+    width: 1em;
+    height: 1em;
+}
+
+.menu-btn{
+    display: block;
+    
+}
+
+.mobile-menu-exit {
+    width: 1em;
+    height: 1em;
+    float: right;
+    cursor: pointer;
+}
+
 @media only screen and (min-width: 800px){
+
+    nav{
+        display: unset;
+        background: unset;
+        height: auto;
+        position: unset;
+        width: 80%;
+        padding: 0;
+
+        ul{
+            width: 40%;
+            display: flex;
+            place-content: space-between;
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            float: right;
+        }
+        
+        a{
+            
+            text-decoration: none;
+        }
+
+    }
+
+    
+    
+    // img{width: 100%;}
+
+    .mobile-menu, .mobile-menu-exit{
+        display: none;
+    }
+
     .featured, .portfolio{
         text-align: left;
     }
@@ -442,6 +519,8 @@ section{
     
 
 }
+
+
 
 @media only screen and (min-width: 1250px){
     header{
