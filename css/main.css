@@ -1,4 +1,8 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700&display=swap");
+* {
+  border: solid black 1px;
+}
+
 body {
   height: 100vh;
   margin: 0;
@@ -362,6 +366,10 @@ section {
 }
 
 @media only screen and (min-width: 1050px) {
+  nav ul {
+    width: unset;
+    width: 60%;
+  }
   .hero {
     height: 90vh;
   }
