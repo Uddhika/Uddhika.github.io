@@ -14,15 +14,22 @@
     <div class="nav-container">
         <header>
             <a href="index.html" class="logo">AnimeU</a>
-            <img id="mobile-cta" class="mobile-menu" src="icon front/menu.svg" alt="">
+            <div class="hamburger">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+            <!-- <img id="mobile-cta" class="mobile-menu" src="icon front/menu.svg" alt=""> -->
             <nav>
                 
-                <img id="mobile-exit" class="mobile-menu-exit" src="icon front/exit.svg" alt="">
+                <!-- <img id="mobile-exit" class="mobile-menu-exit" src="icon front/exit.svg" alt=""> -->
                 <ul>
                     <li><a href="#">Projects</a></li>
                     <li><a href="#">About</a></li>
                     <li><a href="#">Contact</a></li>
                 </ul>
+
+                
             </nav>
 
         </header>
@@ -288,7 +295,7 @@
 
     </script>
 
-    <script>
+    <!-- <script>
         const mobileBtn = document.getElementById('mobile-cta')
             mobileBtnExit = document.getElementById('mobile-exit')
             nav = document.querySelector('nav')
@@ -301,7 +308,21 @@
             nav.classList.remove('menu-btn')
         })
 
+    </script> -->
+
+    <script>
+        const hamburger = document.querySelector(".hamburger");
+        const navMenu = document.querySelector("nav");
+
+        hamburger.addEventListener("click", mobileMenu);
+
+        function mobileMenu() {
+            hamburger.classList.toggle("active");
+            navMenu.classList.toggle("active");
+        }
     </script>
+
+    
 
 </body>
 
